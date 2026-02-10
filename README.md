@@ -22,16 +22,16 @@ Using these datasets, the notebook performs data cleaning, transformation, and a
 - `Employee.csv` – Employee dataframe saved to CSV (Task 1).
 - `Seniority.csv` – Seniority/Designation dataframe saved to CSV (Task 1).
 - `Project.csv` – Project dataframe saved to CSV (Task 1).
-- `TotalProjCost.csv` – Output dataframe containing total project cost per employee (Task 9).[file:1]
+- `TotalProjCost.csv` – Output dataframe containing total project cost per employee (Task 9).
 - `README.md` – This documentation file.
 
-> Note: From Task 2 onwards, all operations are performed by reading these CSV files using `pandas.read_csv`, as required in the assignment.[file:1]
+> Note: From Task 2 onwards, all operations are performed by reading these CSV files using `pandas.read_csv`, as required in the assignment.
 
 ---
 
 ## Tasks Implemented
 
-The notebook follows the exact task sequence from the assignment.[file:1]
+The notebook follows the exact task sequence from the assignment.
 
 1. **Create DataFrames and Save as CSV**  
    - Build three dataframes: Employee, Seniority Level, and Project.  
@@ -55,23 +55,23 @@ The notebook follows the exact task sequence from the assignment.[file:1]
    - For rows where `Status == "Finished"`, set `Bonus` to 5% of `Cost`.
 
 6. **Demote Designation for Failed Projects and Filter**  
-   - For rows with `Status == "Failed"`, demote the designation level by 1 (numerically increase, since 1 is highest).[file:1]  
-   - Remove all records where `Designation Level` becomes greater than 4 (ineligible to head projects).[file:1]
+   - For rows with `Status == "Failed"`, demote the designation level by 1 (numerically increase, since 1 is highest). 
+   - Remove all records where `Designation Level` becomes greater than 4 (ineligible to head projects).
 
 7. **Add “Mr.” / “Mrs.” to First Name and Drop Gender**  
    - Prefix `First Name` with `Mr.` for males and `Mrs.` for females based on `Gender`.  
-   - Drop the `Gender` column from `Final`.[file:1]
+   - Drop the `Gender` column from `Final`.
 
 8. **Promote Designation Based on Age**  
-   - If `Age > 29`, promote designation level by 1 (numerically decrease, with a lower bound of 1).[file:1]
+   - If `Age > 29`, promote designation level by 1 (numerically decrease, with a lower bound of 1).
 
 9. **Calculate Total Project Cost per Employee**  
    - Group `Final` by `ID` and `First Name`.  
    - Sum `Cost` to compute total project cost handled by each employee.  
-   - Save results to **`TotalProjCost`** dataframe and export as `TotalProjCost.csv`.[file:1]
+   - Save results to **`TotalProjCost`** dataframe and export as `TotalProjCost.csv`.
 
 10. **Filter Employees by City Name Containing “o”**  
-    - From `Final`, print all employee records where `City` contains the letter “o” (case-insensitive).[file:1]
+    - From `Final`, print all employee records where `City` contains the letter “o” (case-insensitive).
 
 ---
 
